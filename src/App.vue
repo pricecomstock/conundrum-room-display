@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <div class="bg"></div>
+    <div class="fullscreen-bg">
+      <video loop muted autoplay poster="./assets/stars.jpg" class="fullscreen-bg__video">
+          <source src="./assets/test.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- <div class="bg"></div> -->
     <timer :seconds-remaining="room.secondsRemaining"></timer>
     <puzzle-status :puzzles="room.puzzles"></puzzle-status>
   </div>
@@ -81,5 +86,26 @@ $font_path: './assets/fonts/';
   // animation-duration: 100s;
   // animation-iteration-count: infinite;
   // animation-timing-function: ease-in-out;
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: black;
 }
 </style>

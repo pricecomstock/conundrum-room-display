@@ -61,6 +61,14 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.html$/,
+        loader: 'html-loader?attrs[]=video:src'
+      },
+      {
+        test: /\.mp4$/,
+        loader: 'url-loader?limit=10000&mimetype=video/mp4'
+      },
+      {
         test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)$/,
         loader: 'file-loader',
         options: {
