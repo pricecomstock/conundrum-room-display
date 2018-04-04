@@ -63,3 +63,6 @@ typings/
 .editorconfig
 .babelrc
 dist/
+
+# big ol test video files
+.MP4
