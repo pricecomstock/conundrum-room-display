@@ -32,11 +32,12 @@ export default {
 #timer {
     color: white;
     font-size: 15em;
-    font-family: "FinalFrontier";
+    font-family: "OpenSans";
+    font-weight: 700;
     padding: 0;
     margin: 0;
     position: fixed;
-    bottom: 10px;
+    bottom: 30%;
     left: 30px;
 }
 </style>
