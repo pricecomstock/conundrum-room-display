@@ -36,8 +36,5 @@ export default {
     font-weight: 700;
     padding: 0;
     margin: 0;
-    position: fixed;
-    bottom: 30%;
-    left: 30px;
 }
 </style>

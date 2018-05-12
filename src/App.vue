@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <!-- <div class="fullscreen-bg">
-      <video loop muted autoplay poster="./assets/stars.jpg" class="fullscreen-bg__video">
-          <source src="./assets/test.mp4" type="video/mp4">
-      </video>
-    </div> -->
-    <timer :seconds-remaining="room.secondsRemaining"></timer>
-    <hint-list></hint-list>
-    <!-- <puzzle-status :puzzles="room.puzzles"></puzzle-status> -->
+    <div class="section">
+    	<div class="columns">
+    	  <div class="column is-9">
+    	    <div class="hero is-black is-medium timercontainer">
+            <div class="hero-body">
+              <div class="container">
+                <timer :seconds-remaining="room.secondsRemaining"></timer>
+              </div>
+            </div>
+          </div>
+    	  </div>
+    	    <hint-list class="column is-3" v-if="room.hints" :hints="room.hints"></hint-list>
+    	</div>
+    </div>
   </div>
 </template>
 
@@ -97,25 +103,11 @@ $font_path: './assets/fonts/';
 //   overflow: visible;
 // }
 
-.fullscreen-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;
-}
-
-.fullscreen-bg__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-body {
+#app {
   background-color: #000;
+}
+
+.timercontainer {
+  padding: 6% 0%
 }
 </style>
