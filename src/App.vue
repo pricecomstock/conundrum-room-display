@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-    <div class="fullscreen-bg">
+    <!-- <div class="fullscreen-bg">
       <video loop muted autoplay poster="./assets/stars.jpg" class="fullscreen-bg__video">
           <source src="./assets/test.mp4" type="video/mp4">
       </video>
-    </div>
-    <!-- <div class="bg"></div> -->
+    </div> -->
     <timer :seconds-remaining="room.secondsRemaining"></timer>
     <puzzle-status :puzzles="room.puzzles"></puzzle-status>
   </div>
@@ -57,19 +56,6 @@ $font_path: './assets/fonts/';
     font-family: "FiraCode";
     src: url($font_path + 'FiraCode-Regular.ttf');
 }
-@font-face {
-    font-family: "FinalFrontier";
-    src: url($font_path + 'finalfrontier.ttf');
-}
-@font-face {
-    font-family: "LCARS";
-    src: url($font_path + 'lcars.ttf');
-}
-@font-face {
-    font-family: "LCARS";
-    src: url($font_path + 'lcarsbold.ttf');
-    font-weight: bold;
-}
 
 .bg {
   position: absolute;
@@ -105,6 +91,7 @@ $font_path: './assets/fonts/';
   width: 100%;
   height: 100%;
 }
+
 body {
   background-color: black;
 }
